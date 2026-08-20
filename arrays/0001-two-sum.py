@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def longestCommonPrefix(self, strs: List[str]) -> str:
         # Находим самое короткое слово
@@ -17,6 +18,7 @@ class Solution:
             result += small_st[i]
 
         return result
+
 
 # Time Complexity: O(S), где S — сумма длин всех строк в худшем случае
 # Space Complexity: O(1), так как храним только результирующую строку
