@@ -17,6 +17,7 @@ class Solution:
                 cur_subset.append(nums[i])
                 backtrack(cur_subset)
                 cur_subset.pop()
+
         backtrack([])
         return res
 
