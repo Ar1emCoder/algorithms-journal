@@ -1,22 +1,12 @@
-from typing import List
-
-
 class Solution:
-    def maxProfit(self, prices: List[int]) -> int:
-        # Минимальная цена покупки
-        min_price = float("inf")
-        # Максимальная прибыль
-        max_profit = 0
-
+    def maxProfit(self, prices: list[int]) -> int:
+        min_price = 1000000
+        max_merge = 0
         for price in prices:
-            # Если нашли цену ниже — обновляем минимум
-            if price < min_price:
-                min_price = price
-            # Иначе считаем прибыль и обновляем максимум
-            elif price - min_price > max_profit:
-                max_profit = price - min_price
-
-        return max_profit
+            min_price = min(price, min_price)
+            merge =  price - min_price
+            max_merge = max(merge, max_merge)
+        return max_merge
 
 
 # Time Complexity: O(n) - один проход по массиву
