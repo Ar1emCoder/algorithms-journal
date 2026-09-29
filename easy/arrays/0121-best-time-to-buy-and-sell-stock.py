@@ -4,7 +4,7 @@ class Solution:
         max_merge = 0
         for price in prices:
             min_price = min(price, min_price)
-            merge =  price - min_price
+            merge = price - min_price
             max_merge = max(merge, max_merge)
         return max_merge
 
