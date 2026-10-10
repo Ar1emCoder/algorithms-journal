@@ -1,14 +1,15 @@
 class Solution:
-    def lengthOfLIS(self, nums: list[int]) -> int:
-        dp = [1] * len(nums)
+    def coinChange(self, coins: list[int], amount: int) -> int:
+        dp = [float("inf")] * (amount + 1)
+        dp[0] = 0
 
-        for i in range(len(nums)):
-            for j in range(i):
-                if nums[j] < nums[i]:
-                    dp[i] = max(dp[i], dp[j] + 1)
+        for x in range(1, amount + 1):
+            for coin in coins:
+                if coin <= x:
+                    dp[x] = min(dp[x], dp[x - coin] + 1)
 
-        return max(dp)
+        return dp[amount] if dp[amount] != float("inf") else -1
 
 
-# Time Complexity: O(amount * len(coins)) - для каждой суммы от 1 до amount перебираем все монеты.
-# Space Complexity: O(amount) - массив dp размером amount + 1.
+# Time Complexity: O(n²) - где n длина массива nums. Два вложенных цикла.
+# Space Complexity: O(n) - массив dp размером n.
