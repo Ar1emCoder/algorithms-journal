@@ -1,7 +1,3 @@
-from typing import Optional
-
-
-# Definition for a binary tree node.
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val
@@ -10,7 +6,7 @@ class TreeNode:
 
 
 class Solution:
-    def deleteNode(self, root: Optional[TreeNode], key: int) -> Optional[TreeNode]:
+    def deleteNode(self, root: TreeNode | None, key: int) -> TreeNode | None:
         if root is None:
             return root
 
