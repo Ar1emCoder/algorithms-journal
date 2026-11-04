@@ -8,7 +8,7 @@ class Solution:
         cnt = 0
 
         def dfs(city):
-            if city in isConnected:
+            if city in visited:
                 return
             visited.add(city)
 
@@ -23,5 +23,5 @@ class Solution:
         return cnt
 
 
-# Time Complexity: O(M * N)
-# Space Complexity: O(M * N)
+# Time Complexity: O(N^2)
+# Space Complexity: O(N)
