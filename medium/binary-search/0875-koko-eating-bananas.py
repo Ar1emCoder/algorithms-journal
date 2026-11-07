@@ -5,6 +5,7 @@ class Solution:
         while left < right:
             mid = (left + right) // 2
             hours = 0
+
             for pile in piles:
                 hours += (mid + pile - 1) // mid
 
