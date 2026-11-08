@@ -3,7 +3,6 @@ from typing import List
 
 class Solution:
     def findCircleNum(self, isConnected: List[List[int]]) -> int:
-        n = len(isConnected)
         visited = set()
         cnt = 0
 
@@ -12,14 +11,15 @@ class Solution:
                 return
             visited.add(city)
 
-            for j in range(n):
+            for j in range(len(isConnected)):
                 if isConnected[city][j] == 1 and j not in visited:
                     dfs(j)
 
-        for i in range(n):
+        for i in range(len(isConnected)):
             if i not in visited:
                 cnt += 1
                 dfs(i)
+
         return cnt
 
 
