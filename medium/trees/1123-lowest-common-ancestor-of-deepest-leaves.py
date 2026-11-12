@@ -8,9 +8,6 @@ class TreeNode:
 
 class Solution:
     def lcaDeepestLeaves(self, root: TreeNode | None) -> TreeNode | None:
-        if not root:
-            return root
-
         def dfs(node):
             if not node:
                 return (0, None)  # Кортеж - несколько элементов
