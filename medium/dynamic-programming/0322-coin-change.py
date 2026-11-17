@@ -11,5 +11,5 @@ class Solution:
         return dp[amount] if dp[amount] != float("inf") else -1
 
 
-# Time Complexity: O(n²) - где n длина массива nums. Два вложенных цикла.
-# Space Complexity: O(n) - массив dp размером n.
+# Time Complexity: O(n²) - где n длина массива nums
+# Space Complexity: O(n) - массив dp размером n
