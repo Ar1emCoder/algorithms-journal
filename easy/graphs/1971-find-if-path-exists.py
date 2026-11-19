@@ -13,10 +13,8 @@ class Solution:
         def dfs(node, visited) -> bool:
             if node == destination:
                 return True
-
             if node in visited:
                 return False
-
             visited.add(node)
 
             for neighbor in graph[node]:
