@@ -10,5 +10,5 @@ class Solution:
         return max(dp)
 
 
-# Time Complexity: O(amount * len(coins)) - для каждой суммы от 1 до amount перебираем все монеты.
-# Space Complexity: O(amount) - массив dp размером amount + 1.
+# Time Complexity: O(n^2), где n - длина массива nums.
+# Space Complexity: O(n) для хранения массива dp длиной n.
