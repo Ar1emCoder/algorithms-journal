@@ -23,5 +23,5 @@ class Solution:
         return cnt
 
 
-# Time Complexity: O(N^2)
+# Time Complexity: O(N^2) - идем по i и по j
 # Space Complexity: O(N)
